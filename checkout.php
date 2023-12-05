@@ -12,7 +12,7 @@ function debug_to_console($data) {
 
     echo "<script>console.log('Debug Objects: " . $output . "' );</script>";
 }
-debug_to_console("i am entering");
+debug_to_console($_SESSION["user_id"]);
 foreach ($_SESSION["cart_item"] as $item)
 	debug_to_console("i am in foreach loop");
 												{
