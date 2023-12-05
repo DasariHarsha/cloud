@@ -6,8 +6,8 @@ error_reporting(0);
 session_start();
 if(isset($_POST['submit']))
 {
-	$username = "admin";
-	$password = 1234;
+	$username = $_POST['username'];
+	$password = $_POST['password'];
 	
 	if(!empty($_POST["submit"])) 
      {
