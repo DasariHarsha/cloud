@@ -1,13 +1,10 @@
-<?php
 
-session_start();
-?>
 <!DOCTYPE html>
 <html lang="en">
 <?php
 include("connection/connect.php");
 error_reporting(0);
-
+session_start();
 ?>
 <head>
     <meta charset="utf-8">
