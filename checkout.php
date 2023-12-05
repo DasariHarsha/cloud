@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<p>"heelo"</p>
+
 <?php
 include("connection/connect.php");
 include_once 'product-action.php';
@@ -9,7 +9,7 @@ session_start();
 
 if(empty($_SESSION["user_id"]))
 {
-	echo '<script>alert("failure")</script>'; 
+	<p>"fail heelo"</p>
 	header('location:login.php');
 }
 else{
@@ -24,7 +24,7 @@ if($_POST['submit'])
 $SQL="insert into users_orders(u_id,title,quantity,price) values('".$_SESSION["user_id"]."','".$item["title"]."','".$item["quantity"]."','".$item["price"]."')";
 
 	mysqli_query($db,$SQL);
-	echo '<script>alert("success")</script>'; 
+	<p>"success heelo"</p>
 	$success = "Thankyou! Your Order Placed Successfully!";
 }										  
 													
