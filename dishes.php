@@ -179,7 +179,7 @@ $item_total += ($item["price"]*$item["quantity"]); // calculating current price 
                                         <p>Total Amount</p>
                                         <h3 class="value"><strong>&#8377;<?php echo $item_total; ?></strong></h3>
                                         <p>Free Shipping</p>
-                                        <a href="checkout.php?res_id=<?php echo $_GET['res_id'];?>&action=check"  class="btn theme-btn btn-lg">Checkout</a>
+                                        <a href="checkout.php"  class="btn theme-btn btn-lg">Checkout</a>
                                     </div>
                                 </div>
 								
