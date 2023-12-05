@@ -26,6 +26,9 @@ if(empty($_SESSION["user_id"]))
 	header("refresh:1;url=login.php");
 }
 else{
+	debug_to_console("i am in else loop");
+	debug_to_console($_SESSION);
+	debug_to_console($_SESSION["user_id"]);
 
 										  
 												foreach ($_SESSION["cart_item"] as $item)
