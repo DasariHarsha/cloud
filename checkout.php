@@ -3,13 +3,23 @@
 <?php
 include("connection/connect.php");
 include_once 'product-action.php';
+
 error_reporting(0);
 session_start();
+function debug_to_console($data) {
+    $output = $data;
+    if (is_array($output))
+        $output = implode(',', $output);
+
+    echo "<script>console.log('Debug Objects: " . $output . "' );</script>";
+}
 if(empty($_SESSION["user_id"]))
 {
+	debug_to_console("i am in if loop");
 	header('location:login.php');
 }
 else{
+	debug_to_console(" i am in else loop");
 
 										  
 												foreach ($_SESSION["cart_item"] as $item)
