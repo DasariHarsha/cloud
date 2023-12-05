@@ -12,16 +12,9 @@ function debug_to_console($data) {
 
     echo "<script>console.log('Debug Objects: " . $output . "' );</script>";
 }
-if(empty($_SESSION["user_id"]))
-{
-	debug_to_console("i am in if loop");
-	header('location:login.php');
-}
-else{
-	debug_to_console(" i am in else loop");
-
-										  
-												foreach ($_SESSION["cart_item"] as $item)
+debug_to_console("i am entering");
+foreach ($_SESSION["cart_item"] as $item)
+	debug_to_console("i am in foreach loop");
 												{
 											
 												$item_total += ($item["price"]*$item["quantity"]);
@@ -39,6 +32,8 @@ else{
 														
 													}
 												}
+debug_to_console("i am out loop");
+											
 ?>
 
 
