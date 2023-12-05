@@ -1,8 +1,11 @@
+<?php
+session_start(); //temp session
+?>
 <!DOCTYPE html>
 <html lang="en">
-<?php
 
-session_start(); //temp session
+
+
 error_reporting(0); // hide undefine index
 include("connection/connect.php"); // connection
 if(isset($_POST['submit'] )) //if submit btn is pressed
