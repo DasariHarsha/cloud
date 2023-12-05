@@ -6,6 +6,14 @@ include("connection/connect.php");
 include_once 'product-action.php';
 error_reporting(0);
 session_start();
+
+if(empty($_SESSION["user_id"]))
+{
+	echo '<script>alert("failure")</script>'; 
+	header('location:login.php');
+}
+else{
+
 foreach ($_SESSION["cart_item"] as $item)
 {
 											
@@ -16,21 +24,11 @@ if($_POST['submit'])
 $SQL="insert into users_orders(u_id,title,quantity,price) values('".$_SESSION["user_id"]."','".$item["title"]."','".$item["quantity"]."','".$item["price"]."')";
 
 	mysqli_query($db,$SQL);
-	
+	echo '<script>alert("success")</script>'; 
 	$success = "Thankyou! Your Order Placed Successfully!";
-}
-if(empty($_SESSION["user_id"]))
-{
-	header('location:login.php');
-}
-else{
-
-										  
-												
-
-														
-														
+}										  
 													
+}
 }
 ?>
 
