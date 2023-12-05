@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<p>"heelo"</p>
 <?php
 include("connection/connect.php");
 include_once 'product-action.php';
