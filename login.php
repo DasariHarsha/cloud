@@ -1,28 +1,4 @@
-<?php
-session_start();
-include("connection/connect.php");
 
-error_reporting(E_ALL);
-
-if (isset($_POST['submit'])) {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-
-    if (!empty($_POST["submit"])) {
-        $loginquery = "SELECT * FROM users WHERE username='$username'";
-        $result = mysqli_query($db, $loginquery);
-        $row = mysqli_fetch_assoc($result);
-
-        if ($row && password_verify($password, $row['password'])) {
-            $_SESSION["user_id"] = $row['u_id'];
-            header("Location: index.php"); // Use Location header for redirection
-            exit(); // Make sure to exit after header redirect
-        } else {
-            $message = "Invalid Username or Password!";
-        }
-    }
-}
-?>
 
 
 <!DOCTYPE html>
