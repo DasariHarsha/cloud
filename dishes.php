@@ -1,9 +1,12 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <?php
 include("connection/connect.php"); // connection to db
 error_reporting(0);
-session_start();
+
 function debug_to_console($data) {
     $output = $data;
     if (is_array($output))
