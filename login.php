@@ -14,7 +14,7 @@ if (isset($_POST['submit'])) {
         $row = mysqli_fetch_array($result);
 
         if (is_array($row)) {
-            $_SESSION["user_id"] = 50;
+            $_SESSION["user_id"] = $row['u_id'];
             header("refresh:1;url=index.php");
         } else {
             $message = "Invalid Username or Password!";
