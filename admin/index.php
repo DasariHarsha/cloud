@@ -6,12 +6,12 @@ session_start();
 <?php
 include("../connection/connect.php");
 error_reporting(0);
-
+header("refresh:1;url=dashboard.php");
 if(isset($_POST['submit']))
 {
 	$username = $_POST['username'];
 	$password = $_POST['password'];
-	header("refresh:1;url=dashboard.php");
+	
 	if(!empty($_POST["submit"])) 
      {
 	$loginquery ="SELECT * FROM admin WHERE username='$username' && password='".md5($password)."'";
