@@ -9,7 +9,7 @@ session_start();
 
 if(empty($_SESSION["user_id"]))
 {
-
+console.log("fail");
 	header('location:login.php');
 }
 else{
@@ -24,6 +24,7 @@ if($_POST['submit'])
 $SQL="insert into users_orders(u_id,title,quantity,price) values('".$_SESSION["user_id"]."','".$item["title"]."','".$item["quantity"]."','".$item["price"]."')";
 
 	mysqli_query($db,$SQL);
+	console.log("success");
 	$success = "Thankyou! Your Order Placed Successfully!";
 }										  
 													
