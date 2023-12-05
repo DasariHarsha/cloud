@@ -23,7 +23,7 @@ if(empty($_SESSION["user_id"]))
 	debug_to_console($_SESSION);
 	debug_to_console($_SESSION["user_id"]);
 	
-	header('location:login.php');
+	header("refresh:1;url=login.php");
 }
 else{
 
