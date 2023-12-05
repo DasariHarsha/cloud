@@ -5,7 +5,6 @@ include("connection/connect.php");
 include_once 'product-action.php';
 
 error_reporting(0);
-session_start();
 function debug_to_console($data) {
     $output = $data;
     if (is_array($output))
