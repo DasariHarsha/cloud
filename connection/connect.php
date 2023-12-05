@@ -4,7 +4,7 @@
 $servername = "foodpick.mysql.database.azure.com"; //server
 $username = "harsha"; //username
 $password = "Gowthami@1"; //password
-$dbname = "foodpicky_db";  //database
+$dbname = "foodpick";  //database
 
 // Create connection
 $db = mysqli_connect($servername, $username, $password, $dbname); // connecting 
