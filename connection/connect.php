@@ -1,9 +1,9 @@
 <?php
 
 //main connection file for both admin & front end
-$servername = "localhost"; //server
-$username = "root"; //username
-$password = ""; //password
+$servername = "foodpick.mysql.database.azure.com"; //server
+$username = "harsha"; //username
+$password = "Gowthami@1"; //password
 $dbname = "foodpicky_db";  //database
 
 // Create connection
