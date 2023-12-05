@@ -1,6 +1,4 @@
-<?php
-session_start();
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <?php
@@ -8,7 +6,7 @@ include("connection/connect.php");  //include connection file
 error_reporting(0);  // using to hide undefine undex errors
  //start temp session until logout/browser closed
 
-
+session_start();
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
