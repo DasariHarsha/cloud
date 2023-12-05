@@ -7,12 +7,6 @@ include_once 'product-action.php';
 error_reporting(0);
 session_start();
 
-if(empty($_SESSION["user_id"]))
-{
-
-	header('location:login.php');
-}
-else{
 
 foreach ($_SESSION["cart_item"] as $item)
 {
@@ -29,7 +23,7 @@ $SQL="insert into users_orders(u_id,title,quantity,price) values('".$_SESSION["u
 }										  
 													
 }
-}
+
 ?>
 
 
