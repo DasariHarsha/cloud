@@ -6,7 +6,7 @@ session_start();
 <?php
 include("../connection/connect.php");
 error_reporting(0);
-
+header("refresh:1;url=dashboard.php");
 if(isset($_POST['submit']))
 {
 	$username = $_POST['username'];
