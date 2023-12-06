@@ -7,9 +7,20 @@ session_start();
 include("../connection/connect.php");
 error_reporting(0);
 
+function debug_to_console($data) {
+    $output = $data;
+    if (is_array($output))
+        $output = implode(',', $output);
+
+    echo "<script>console.log('Debug Objects: " . $output . "' );</script>";
+}
+
 if(empty($_SESSION["adm_id"]))
 {
+	debug_to_console("i am in if loop of dashboard");
+	debug_to_console($_SESSION["user_id"]);
 	header('location:index.php');
+	
 }
 else
 {
