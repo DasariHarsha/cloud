@@ -1,9 +1,12 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <?php
 
 
-session_start();
+
 error_reporting(0);
 include("../connection/connect.php");
 
